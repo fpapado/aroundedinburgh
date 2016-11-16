@@ -1,16 +1,27 @@
 defmodule Rumbl.PlaceController do
   use Rumbl.Web, :controller
-  plug :scrub_params, "place" when action in [:create, :update]
-
   alias Rumbl.Place
+  alias Rumbl.Category
+
+  plug :scrub_params, "place" when action in [:create, :update]
+  plug :load_categories when action in [:new, :create, :edit, :update]
+
+  def user_places(user) do
+      assoc(user, :places)
+  end
+
+  defp load_categories(conn, _) do
+      query =
+          Category
+          |> Category.alphabetical
+          |> Category.names_and_ids
+      categories = Repo.all query
+      assign(conn, :categories, categories)
+  end
 
   def action(conn, _) do
       apply(__MODULE__, action_name(conn),
         [conn, conn.params, conn.assigns.current_user])
-  end
-
-  def user_places(user) do
-      assoc(user, :places)
   end
 
   def index(conn, _params, user) do
