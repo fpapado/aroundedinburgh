@@ -1,10 +1,43 @@
 # Next Steps
-Add /places route, which goes to another controller action, which just lists all the places, not just the user's.
+Add /places route, which goes to another controller action, listing all the places, not just the user's.
 
 Add JS / Build tools
 
-Style
+Initial style pass
 
-Add location: how?
+# Basic Functionality
+Category search. "I want a place to..."
 
+# Location
+Add location to places: how?
 
+Add map for each place: leaflet.js? static?
+
+Add map for all places
+
+"Find closest"
+
+# Extras: Place API
+"Goes well with" field: annotations about which places pair nearby. Manual initially
+
+"Itinerary": collection of places, with a guide.
+    Itinerary: Moray House studying
+        -> Study at: Moray House library
+        -> Have lunch at: Henderson's
+        -> Visit: bla
+
+    Then visiting Moray House would bring up:
+        "This place is part of an itinerary"
+
+# Extras: Location
+"Nearby", for each place
+
+"Nearby", for user
+
+# The Moon
+Assess JS front-end
+
+Web worker / offline functionality
+
+# Far off
+"Monuments" expansion pack / deck
