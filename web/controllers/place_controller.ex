@@ -25,10 +25,15 @@ defmodule Rumbl.PlaceController do
   end
 
   def index(conn, _params, user) do
-    # places = Repo.all(Place)
-    places = Repo.all(user_places(user))
+    places = Repo.all(Place)
 
     render(conn, "index.html", places: places)
+  end
+
+  def user_places_index(conn, _params, user) do
+      places = Repo.all(user_places(user))
+
+      render(conn, "index_manage.html", places: places)
   end
 
   def new(conn, _params, user) do
@@ -57,8 +62,8 @@ defmodule Rumbl.PlaceController do
   end
 
   def show(conn, %{"id" => id}, user) do
-    #place = Repo.get!(Place, id)
-    place = Repo.get!(user_places(user), id)
+    place = Repo.get!(Place, id)
+    #place = Repo.get!(user_places(user), id)
 
     render(conn, "show.html", place: place)
   end

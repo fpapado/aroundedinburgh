@@ -20,12 +20,17 @@ defmodule Rumbl.Router do
     get "/", PageController, :index
     resources "/users", UserController, only: [:index, :show, :new, :create]
     resources "/sessions", SessionController, only: [:new, :create, :delete]
+    resources "/places", PlaceController, only: [:index, :show]
   end
 
   scope "/manage", Rumbl do
       pipe_through [:browser, :authenticate_user]
 
-      resources "/places", PlaceController
+      # Only show the user's places in manage
+      get "/places", PlaceController, :user_places_index
+
+      # All the actions except the default index. Show goes to the usual action
+      resources "/places", PlaceController, only: [:show, :new, :create, :edit, :update, :delete]
   end
 
   # Other scopes may use custom stacks.

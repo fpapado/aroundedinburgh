@@ -21,8 +21,12 @@
 
       <td class="text-right">
         <%= link "Show", to: place_path(@conn, :show, place), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: place_path(@conn, :edit, place), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: place_path(@conn, :delete, place), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
       </td>
     </tr>
 <% end %>
   </tbody>
 </table>
+
+<%= link "New place", to: place_path(@conn, :new) %>

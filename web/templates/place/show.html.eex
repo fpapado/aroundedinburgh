@@ -23,6 +23,3 @@
   </li>
 
 </ul>
-
-<%= link "Edit", to: place_path(@conn, :edit, @place) %>
-<%= link "Back", to: place_path(@conn, :index) %>
