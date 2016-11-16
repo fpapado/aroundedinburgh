@@ -1,0 +1,28 @@
+<h2>Show place</h2>
+
+<ul>
+
+  <li>
+    <strong>User:</strong>
+    <%= @place.user_id %>
+  </li>
+
+  <li>
+    <strong>Url:</strong>
+    <%= @place.url %>
+  </li>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @place.title %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @place.description %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: place_path(@conn, :edit, @place) %>
+<%= link "Back", to: place_path(@conn, :index) %>
