@@ -4,18 +4,36 @@ defmodule Rumbl.PlaceController do
 
   alias Rumbl.Place
 
-  def index(conn, _params) do
-    places = Repo.all(Place)
+  def action(conn, _) do
+      apply(__MODULE__, action_name(conn),
+        [conn, conn.params, conn.assigns.current_user])
+  end
+
+  def user_places(user) do
+      assoc(user, :places)
+  end
+
+  def index(conn, _params, user) do
+    # places = Repo.all(Place)
+    places = Repo.all(user_places(user))
+
     render(conn, "index.html", places: places)
   end
 
-  def new(conn, _params) do
-    changeset = Place.changeset(%Place{})
+  def new(conn, _params, user) do
+    changeset =
+        user
+        |> build_assoc(:places)
+        |> Place.changeset()
+
     render(conn, "new.html", changeset: changeset)
   end
 
-  def create(conn, %{"place" => place_params}) do
-    changeset = Place.changeset(%Place{}, place_params)
+  def create(conn, %{"place" => place_params}, user) do
+    changeset =
+        user
+        |> build_assoc(:places)
+        |> Place.changeset(place_params)
 
     case Repo.insert(changeset) do
       {:ok, _place} ->
@@ -27,19 +45,24 @@ defmodule Rumbl.PlaceController do
     end
   end
 
-  def show(conn, %{"id" => id}) do
-    place = Repo.get!(Place, id)
+  def show(conn, %{"id" => id}, user) do
+    #place = Repo.get!(Place, id)
+    place = Repo.get!(user_places(user), id)
+
     render(conn, "show.html", place: place)
   end
 
-  def edit(conn, %{"id" => id}) do
-    place = Repo.get!(Place, id)
+  def edit(conn, %{"id" => id}, user) do
+    #place = Repo.get!(Place, id)
+    place = Repo.get!(user_places(user), id)
     changeset = Place.changeset(place)
+
     render(conn, "edit.html", place: place, changeset: changeset)
   end
 
-  def update(conn, %{"id" => id, "place" => place_params}) do
-    place = Repo.get!(Place, id)
+  def update(conn, %{"id" => id, "place" => place_params}, user) do
+    # place = Repo.get!(Place, id)
+    place = Repo.get!(user_places(user), id)
     changeset = Place.changeset(place, place_params)
 
     case Repo.update(changeset) do
@@ -52,8 +75,9 @@ defmodule Rumbl.PlaceController do
     end
   end
 
-  def delete(conn, %{"id" => id}) do
-    place = Repo.get!(Place, id)
+  def delete(conn, %{"id" => id}, user) do
+    #place = Repo.get!(Place, id)
+    place = Repo.get!(user_places(user), id)
 
     # Here we use delete! (with a bang) because we expect
     # it to always work (and if it does not, it will raise).
