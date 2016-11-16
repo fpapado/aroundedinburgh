@@ -1,9 +1,10 @@
 # Next Steps
-Add /places route, which goes to another controller action, listing all the places, not just the user's.
-
 Add JS / Build tools
 
 Initial style pass
+
+Remove edit buttons from default places index / separate place index and
+manage place index
 
 # Basic Functionality
 Category search. "I want a place to..."
