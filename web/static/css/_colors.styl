@@ -1,0 +1,25 @@
+/* Text Colours*/
+// Signature Colour | Complementary | Compound
+base_colors = bright-green #59d7a5,
+pale-red #D76E59,
+dark-red #8A301E,
+pale-green #83FFCE,
+dark-green #2B8A65,
+blue-gray #5C6E71
+
+/* Generate Base, Background, Border */
+for pair in base_colors
+    .{pair[0]}
+        color pair[1]
+
+for pair in base_colors
+    .{pair[0]}
+        color pair[1]
+    .bg-{pair[0]}
+        background-color pair[1]
+
+for pair in base_colors
+    .{pair[0]}
+        color pair[1]
+    .b--{pair[0]}
+        border-color pair[1]
