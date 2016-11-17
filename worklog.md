@@ -1,13 +1,18 @@
 # Next Steps
-Add JS / Build tools
+Initial style pass: place index and show pages
 
-Initial style pass
+Add link to homepage
 
-Remove edit buttons from default places index / separate place index and
-manage place index
+Change menu / add public places
 
 # Basic Functionality
 Category search. "I want a place to..."
+
+UUID
+
+Slug for places
+
+Admin separation
 
 # Location
 Add location to places: how?
@@ -17,6 +22,11 @@ Add map for each place: leaflet.js? static?
 Add map for all places
 
 "Find closest"
+
+# Towards Production
+Deployment
+
+Headers
 
 # Extras: Place API
 "Goes well with" field: annotations about which places pair nearby. Manual initially
