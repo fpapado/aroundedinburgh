@@ -1,1 +1,3 @@
-/* This file is for your main application css. */
+.b--bright-green {
+    border-color: hsl(156, 62%, 60%);
+}
