@@ -12,20 +12,32 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="mw5 mw7-ns center pa3 ph5-ns">
       <header class="header">
-        <ol class="breadcrumb text-right">
+        <ul class="list tr">
             <%= if @current_user do %>
-                <li><%= @current_user.username %></li>
-                <li><%= link "My Places", to: place_path(@conn, :user_places_index) %></li>
-                <li>
-                    <%= link "Log out", to: session_path(@conn, :delete, @current_user), method: "delete" %>
+                <li class="dib mr2">
+                    <a class="f6 f5-ns b db pa2 green"><%= @current_user.username %></a>
+                </li>
+                <li class="dib mr2">
+                    <%= link "My Places", to: place_path(@conn, :user_places_index),
+                        class: "f6 f5-ns b db pa2 link dim mid-gray" %>
+                </li>
+                <li class="dib mr2">
+                    <%= link "Log out", to: session_path(@conn, :delete, @current_user), method: "delete",
+                        class: "f6 f5-ns b db pa2 link dim mid-gray" %>
                 </li>
             <% else %>
-                <li><%= link "Register", to: user_path(@conn, :new) %></li>
-                <li><%= link "Log in", to: session_path(@conn, :new) %></li>
+                <li class="dib mr2">
+                    <%= link "Register", to: user_path(@conn, :new),
+                        class: "f6 f5-ns b db pa2 link dim mid-gray" %>
+                </li>
+                <li class="dib mr2">
+                    <%= link "Log in", to: session_path(@conn, :new),
+                        class: "f6 f5-ns b db pa2 link dim mid-gray" %>
+                </li>
             <% end %>
-        </ol>
+        </ul>
         <span class="logo"></span>
       </header>
 
