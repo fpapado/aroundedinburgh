@@ -1,28 +1,17 @@
-<h2>Listing places</h2>
+<div class="w-100 tc sans-serif">
+    <h2 class="f3 f1-ns mt0 mb3 mt4-ns mb4-ns tracked lh-title black-70 ttu">Places</h2>
+</div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Url</th>
-      <th>Title</th>
-      <th>Description</th>
-
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-<%= for place <- @places do %>
-    <tr>
-      <td><%= place.user_id %></td>
-      <td><%= place.url %></td>
-      <td><%= place.title %></td>
-      <td><%= place.description %></td>
-
-      <td class="text-right">
-        <%= link "Show", to: place_path(@conn, :show, place), class: "btn btn-default btn-xs" %>
-      </td>
-    </tr>
-<% end %>
-  </tbody>
-</table>
+<div class="center">
+    <%= for place <- @places do %>
+        <div class="db mb3 pa3 ba bw1">
+            <span class="dib f5 f4-ns b sans-serif black-70">
+                <%= place.title %>
+            </span>
+            <span class="db tr">
+                <%= link "Show", to: place_path(@conn, :show, place),
+                    class: "dim link bb bw1 b--pale-red black-70" %>
+            </span>
+        </div>
+    <% end %>
+</div>
