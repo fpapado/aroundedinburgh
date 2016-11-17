@@ -1,7 +1,7 @@
 <h1>New User</h1>
 
 <%= if @changeset.action do %>
-    <div class="alert alert-danger">
+    <div class="alert db mb3 ph3 b ba bw2 b--pale-red pale-red" role="alert">
         <p>
             Oops, something went wrong! please check the errors below.
         </p>

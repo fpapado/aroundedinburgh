@@ -27,5 +27,11 @@
 .b--dark-green {
     border-color: #2B8A65;
 }
+.b--dark-red {
+    border-color: #8A301E;
+}
 
 /* Background Colours */
+.alert:empty {
+    display: none;
+}

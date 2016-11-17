@@ -22,7 +22,7 @@
                   <ul class="list mt3 mb0 pl0 tc tr-ns">
                       <%= if @current_user do %>
                       <li class="dib mr2">
-                          <a class="f6 f5-ns b db green"><%= @current_user.username %></a>
+                          <a class="f6 f5-ns b db dark-green"><%= @current_user.username %></a>
                       </li>
                       <li class="dib mr2">
                           <%= link "My Places", to: place_path(@conn, :user_places_index),
@@ -48,8 +48,8 @@
 
           <div class="pa3 ph5-ns">
 
-              <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-              <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+              <p class="alert db mb3 pa2 b ba bw2 b--dark-green dark-green" role="alert"><%= get_flash(@conn, :info) %></p>
+              <p class="alert db mb3 pa2 b ba bw2 b--pale-red pale-red" role="alert"><%= get_flash(@conn, :error) %></p>
 
               <%= render @view_module, @view_template, assigns %>
 
