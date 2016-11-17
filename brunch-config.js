@@ -51,6 +51,8 @@ exports.config = {
 
   // Configure your plugins
   plugins: {
+    stylus: {
+    },
     babel: {
       // Do not use ES6 compiler in vendor code
       ignore: [/web\/static\/vendor/],
