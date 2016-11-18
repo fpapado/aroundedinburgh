@@ -3,35 +3,33 @@ Add location to places:
     Migrate to add address, coordinates fields
     GeoJSON storage, geocoding from address
 
-Add each place to JS
+Add map with all places in homepage
 
-Add map for all places
+Slug for places
+UUID
 
 Category search. "I want a place to..."
 
-Slug for places
+More styling for places (new etc.)
 
-Upload place photo to S3
+# Refactoring and Tests
+Write basic integration tests
 
-Limit description size
-
-UUID
-
+# Roles
 Admin separation
+
+Close off signups / approval scheme
 
 # Location
 "Find closest"
 
-Static image?
-
-# More styling
-Jeet grid?
-
-Animate logo
-
-Black-80?
+Static image before loading on click?
 
 # Writing
+Upload place photo to S3
+
+Limit description size
+
 Markdown parsing?
 
 # Towards Production
@@ -39,27 +37,11 @@ Deployment
 
 Headers
 
-# Extras: Place API
-"Goes well with" field: annotations about which places pair nearby. Manual initially
+App Manifest
 
-"Itinerary": collection of places, with a guide.
-    Itinerary: Moray House studying
-        -> Study at: Moray House library
-        -> Have lunch at: Henderson's
-        -> Visit: bla
+# More styling
+Jeet grid?
 
-    Then visiting Moray House would bring up:
-        "This place is part of an itinerary"
+Animate logo
 
-# Extras: Location
-"Nearby", for each place
-
-"Nearby", for user
-
-# The Moon
-Assess JS front-end
-
-Web worker / offline functionality
-
-# Far off
-"Monuments" expansion pack / deck
+Black-80?
