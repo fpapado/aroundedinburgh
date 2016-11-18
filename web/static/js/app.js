@@ -14,7 +14,7 @@
 // import 'phoenix_html';
 // import Map from './map';
 
-let placemap = L.map('mapid').setView([55.95, -3.18], 13);
+let placemap = L.map('mapid').setView([55.942456, -3.182448], 14);
 
 // L.tileLayer('https://api.mapbox.com/styles/v1/fpapado/civo3gxei00472joilop02agr/tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
 L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v8/tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
@@ -23,3 +23,6 @@ L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v8/tiles/256/{z}/{x}/
     id: 'your.mapbox.project.id',
     accessToken: 'pk.eyJ1IjoiZnBhcGFkbyIsImEiOiJjaXZudmtvbXQwMDBjMnp0ZWR6NjE4ZTFhIn0.s4SzhiEbl9tkhkkTBmSzjA',
 }).addTo(placemap);
+
+let placemarker = L.marker([55.942456, -3.182448]).addTo(placemap)
+placemarker.bindPopup('Filament Coffee', {className: 'pop'}).openPopup();
