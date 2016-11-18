@@ -1,31 +1,32 @@
 # Basic Functionality
+Add location to places: how?
+GeoJSON storage, geocoding from address
+
+Add map for all places
+
+Category search. "I want a place to..."
+
+Slug for places
+
 Upload place photo to S3
 
 Limit description size
 
-Category search. "I want a place to..."
-
 UUID
 
-Slug for places
-
 Admin separation
+
+# Location
+"Find closest"
+
+Static image?
+
+# More styling
+Jeet grid?
 
 Animate logo
 
 Black-80?
-
-# Location
-Add location to places: how?
-
-Add map for each place: leaflet.js? static?
-
-Add map for all places
-
-"Find closest"
-
-# More styling
-Jeet grid?
 
 # Writing
 Markdown parsing?
