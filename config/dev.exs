@@ -40,4 +40,5 @@ config :rumbl, Rumbl.Repo,
   password: "postgres",
   database: "rumbl_dev",
   hostname: "localhost",
+  extensions: [{Geo.PostGIS.Extension, []}],
   pool_size: 10
