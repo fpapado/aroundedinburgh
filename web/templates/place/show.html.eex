@@ -4,8 +4,7 @@
     </h2>
 </div>
 
-<div class="mb4 pa5 pa6-ns ba bw1 b--pale-red">
-    <h3 class="tc black-70 ttu">Map goes here</h3>
+<div id="mapid" class="mb4 h5 h6-ns ba bw1 b--pale-red">
 </div>
 
 <div class="cf lh-copy black-80 f5">
