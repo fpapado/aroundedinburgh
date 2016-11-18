@@ -7,8 +7,11 @@
         <div class="db mb3 pa3 ba bw1">
             <span class="dib f5 f4-ns b sans-serif black-70">
                 <%= place.title %>
-                <a class="mt3 mr2 circle bg-<%= category_as_colour(place) %>"></a>
             </span>
+            <div class="db black-70">
+                <a class="dib mt3 mr2 circle bg-<%= category_as_colour(place) %>"></a>
+                <span class="dib"><%= category_name_or_blank(place) %></span>
+            </div>
             <span class="db tr">
                 <%= link "Show", to: place_path(@conn, :show, place),
                     class: "dim link bb bw1 b--pale-red black-70" %>

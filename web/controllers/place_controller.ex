@@ -10,6 +10,10 @@ defmodule Rumbl.PlaceController do
       assoc(user, :places)
   end
 
+  def place_categories(place) do
+      assoc(place, :categories)
+  end
+
   defp load_categories(conn, _) do
       query =
           Category
@@ -25,7 +29,10 @@ defmodule Rumbl.PlaceController do
   end
 
   def index(conn, _params, user) do
-    places = Repo.all(Place)
+    places =
+        Place
+        |> Repo.all 
+        |> Repo.preload([:category])
 
     render(conn, "index.html", places: places)
   end

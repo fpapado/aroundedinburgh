@@ -9,7 +9,14 @@ defmodule Rumbl.PlaceView do
           3 -> 'light-blue'
           4 -> 'dark-red'
           5 -> 'gold'
-          _ -> 'gold'
+          _ -> 'gray'
+      end
+  end
+
+  def category_name_or_blank(%Place{category: category}) do
+      case category do
+          nil -> 'Uncategorised'
+          _   -> category.name
       end
   end
 end
