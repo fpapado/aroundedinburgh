@@ -1,11 +1,8 @@
-# Next Steps
-Initial style pass: place index and show pages
-
-Add link to homepage
-
-Change menu / add public places
-
 # Basic Functionality
+Upload place photo to S3
+
+Limit description size
+
 Category search. "I want a place to..."
 
 UUID
@@ -13,6 +10,10 @@ UUID
 Slug for places
 
 Admin separation
+
+Animate logo
+
+Black-80?
 
 # Location
 Add location to places: how?
@@ -22,6 +23,12 @@ Add map for each place: leaflet.js? static?
 Add map for all places
 
 "Find closest"
+
+# More styling
+Jeet grid?
+
+# Writing
+Markdown parsing?
 
 # Towards Production
 Deployment
