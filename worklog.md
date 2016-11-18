@@ -1,6 +1,9 @@
 # Basic Functionality
-Add location to places: how?
-GeoJSON storage, geocoding from address
+Add location to places:
+    Migrate to add address, coordinates fields
+    GeoJSON storage, geocoding from address
+
+Add each place to JS
 
 Add map for all places
 
