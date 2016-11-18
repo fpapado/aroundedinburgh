@@ -31,7 +31,7 @@ defmodule Rumbl.PlaceController do
   def index(conn, _params, user) do
     places =
         Place
-        |> Repo.all 
+        |> Repo.all
         |> Repo.preload([:category])
 
     render(conn, "index.html", places: places)
@@ -69,7 +69,9 @@ defmodule Rumbl.PlaceController do
   end
 
   def show(conn, %{"id" => id}, user) do
-    place = Repo.get!(Place, id)
+    place =
+        Repo.get!(Place, id)
+        |> Repo.preload([:user, :category])
     #place = Repo.get!(user_places(user), id)
 
     render(conn, "show.html", place: place)

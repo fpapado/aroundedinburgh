@@ -4,8 +4,9 @@
     </h2>
 </div>
 
-<div id="mapid" class="mb4 h5 h6-ns ba bw1 b--black-40">
-</div>
+<%= content_tag :div, id: "placemap", class: "mb4 h5 h6-ns ba bw1 b--black-40",
+      data: [name: @place.title, lat: 55.942456, lng: -3.182448] do %>
+<% end %>
 
 <div class="cf lh-copy black-80 f5">
     <div class="cf fl w-100 w-70-ns">
@@ -22,6 +23,9 @@
         </a>
 
         <h4 class="f4 mt3 mb2 lh-title">Added by:</h4>
-        <%= @place.user_id %>
+        <%= username_or_blank(@place) %>
+
+        <h4 class="f4 mt3 mb2 lh-title">Category:</h4>
+        <%= category_name_or_blank(@place) %>
     </div>
 </div>
