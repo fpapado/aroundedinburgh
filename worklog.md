@@ -1,7 +1,14 @@
 # Basic Functionality
 Add location to places:
+    Add geo library
+    Install PostGIS
     Migrate to add address, coordinates fields
-    GeoJSON storage, geocoding from address
+
+    When adding a place:
+        User fills Address field
+        Address is geocoded into GeoJSON
+        Address, GeoJSON are saved into DB
+        We could geocode every time on address..
 
 Add map with all places in homepage
 
