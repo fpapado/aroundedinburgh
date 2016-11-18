@@ -1,25 +1,28 @@
-<h2>Show place</h2>
+<div class="w-100 tc sans-serif">
+    <h2 class="f3 f1-ns mt0 mb3 mt4-ns mb4-ns tracked lh-title black-70 ttu">
+        <%= @place.title %>
+    </h2>
+</div>
 
-<ul>
+<div class="mb4 pa5 pa6-ns ba bw1 b--pale-red">
+    <h3 class="tc black-70 ttu">Map goes here</h3>
+</div>
 
-  <li>
-    <strong>User:</strong>
-    <%= @place.user_id %>
-  </li>
+<div class="cf lh-copy black-80 f5">
+    <div class="cf fl w-100 w-70-ns">
+        <h3 class="f3 mt0 mb3 lh-title">Description</h3>
+        <p class="mt3 mb3 pr4-m measure"><%= @place.description %></p>
+    </div>
+    <div class="fl w-100 w-30-ns">
+        <h3 class="f3 mt0 mb3 lh-title">Information</h3>
 
-  <li>
-    <strong>Url:</strong>
-    <%= @place.url %>
-  </li>
+        <h4 class="f4 mt0 mb2 lh-title">Link:</h4>
+        <a href="<%= @place.url %>",
+            class="dim link bb bw1 b--bright-green black-70">
+            <%= @place.url %>
+        </a>
 
-  <li>
-    <strong>Title:</strong>
-    <%= @place.title %>
-  </li>
-
-  <li>
-    <strong>Description:</strong>
-    <%= @place.description %>
-  </li>
-
-</ul>
+        <h4 class="f4 mt3 mb2 lh-title">Added by:</h4>
+        <%= @place.user_id %>
+    </div>
+</div>

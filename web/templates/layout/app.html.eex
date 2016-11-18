@@ -13,7 +13,7 @@
   </head>
 
   <body class="w-100">
-      <main role="main" class="mw7-ns center">
+      <main role="main" class="mw7-ns mw8-l center">
           <nav class="db w-100 pa3 ph5-ns border-box cf">
               <div class="fl w-100 w-40-ns tc v-mid sans-serif">
                   <a class="db f6 f5-ns pa2 link dim ba bw2 b--bright-green black-70 tracked lh-title b ttu",
