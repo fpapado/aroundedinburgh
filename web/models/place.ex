@@ -5,6 +5,8 @@ defmodule Rumbl.Place do
     field :url, :string
     field :title, :string
     field :description, :string
+    field :address, :string
+    field :coordinates, Geo.Point
     belongs_to :user, Rumbl.User
     belongs_to :category, Rumbl.Category
 
@@ -14,7 +16,7 @@ defmodule Rumbl.Place do
   @doc """
   Builds a changeset based on the `struct` and `params`.
   """
-  @required_fields ~w(url title description)
+  @required_fields ~w(url title description address)
   @optional_fields ~w(category_id)
   def changeset(struct, params \\ %{}) do
     struct

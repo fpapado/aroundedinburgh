@@ -22,8 +22,15 @@ defmodule Rumbl.PlaceView do
 
   def username_or_blank(%Place{user: user}) do
       case user do
-          nil -> 'Unknown'
+          nil -> 'Guest'
           _   -> user.name
+      end
+  end
+
+  def address_or_blank(%Place{address: address}) do
+      case address do
+          nil -> 'Unspecified'
+          _   -> address
       end
   end
 end
