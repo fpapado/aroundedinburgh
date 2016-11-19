@@ -19,7 +19,6 @@ let defaultViewLatLng = [55.9533, -3.1883];
 
 if(map) {
     let placeGeo = JSON.parse(map.getAttribute('data-placejson'));
-    console.log(placeGeo);
 
     initMap([0, 0]);
     // Map.addMarker(map.getAttribute('data-name'), data.latlng);
@@ -28,7 +27,7 @@ if(map) {
 
 function initMap(center) {
     if (center[0] === 0 && center[1] === 0) {
-        console.log('No geocoding data. Showing default view');
+        console.log('No geocoding data. Showing default city view.');
         Map.init(map.id, defaultViewLatLng);
     }
     else {

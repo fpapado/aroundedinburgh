@@ -25,9 +25,14 @@ let Map = {
     },
 
     addFeature(placeGeo) {
-        this.geoLayer.addData(placeGeo);
-        console.log(this.placeMap);
-        console.log(this.geoLayer);
+        let coords = placeGeo.geometry.coordinates;
+        if (coords[0] === 0 && coords[1] === 0){
+            // 0, 0 is our fallback if something goes wrong in back-end
+            console.log('It seems we have no coordinates for this place.');
+        }
+        else {
+            this.geoLayer.addData(placeGeo);
+        }
     }
 };
 
