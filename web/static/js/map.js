@@ -1,6 +1,9 @@
 let Map = {
-    init(mapId, placeTitle, lat, lng) {
-        let placemap = L.map(mapId).setView([lat, lng], 14);
+    placemap: null,
+
+    init(mapId, latlng) {
+        console.log(L);
+        self.placemap = L.map(mapId).setView(latlng, 14);
 
         // L.tileLayer('https://api.mapbox.com/styles/v1/fpapado/civo3gxei00472joilop02agr/tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
         L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v8/tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
@@ -9,8 +12,10 @@ let Map = {
             id: 'your.mapbox.project.id',
             accessToken: 'pk.eyJ1IjoiZnBhcGFkbyIsImEiOiJjaXZudmtvbXQwMDBjMnp0ZWR6NjE4ZTFhIn0.s4SzhiEbl9tkhkkTBmSzjA',
         }).addTo(placemap);
+    },
 
-        let placemarker = L.marker([55.942456, -3.182448]).addTo(placemap);
+    addMarker(placeTitle, latlng) {
+        let placemarker = L.marker(latlng).addTo(placemap);
         placemarker
             .bindPopup(placeTitle, {className: 'pop'})
             .openPopup();
