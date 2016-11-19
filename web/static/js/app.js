@@ -19,8 +19,10 @@ let defaultViewLatLng = [55.9533, -3.1883];
 
 if(map) {
     let placeGeo = JSON.parse(map.getAttribute('data-placejson'));
+    let coords = placeGeo.geometry.coordinates;
 
-    initMap([0, 0]);
+    // GeoJSON is lng, lat; we flip them
+    initMap([coords[1], coords[0]]);
     Map.addFeature(placeGeo);
 }
 
