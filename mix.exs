@@ -40,7 +40,7 @@ defmodule Rumbl.Mixfile do
      {:cowboy, "~> 1.0"},
      {:comeonin, "~> 2.0"},
      {:geo, "~> 1.2"},
-     {:geocoder, "~> 0.4"}]
+     {:geocoder, git: "https://github.com/fpapado/geocoder.git"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.

@@ -25,7 +25,8 @@ config :logger, :console,
 # Configures geocoder
 config :geocoder, Geocoder.Worker, [
     size: 4,
-    max_overflow: 2
+    max_overflow: 2,
+    provider: Geocoder.Providers.OpenStreetMaps
 ]
 
 config :geocoder, Geocoder.Store, [
