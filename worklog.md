@@ -6,6 +6,7 @@ Liberate the data:
 
     DONE Client-side geocoding call to mapbox from address
 
+    DONE 
     This is a compromise for now, but I plan to liberate the data
     using OpenStreetMap geocoding and a server implementation.
     Besides, it doesn't make sense to be sending a JS bundle plus
@@ -13,14 +14,17 @@ Liberate the data:
     Having the location server-side would also help with distance
     calculations.
 
+    DONE
     When adding a place:
         User fills Address field, sent to server
-        Address is geocoded into GeoJSON
-        Address, GeoJSON are saved into DB
-        We could geocode every time on address..
+        Address is geocoded 
+          cast to coordinates as %Point.Geo
+        Address, coordinates are saved into DB
 
-    Add decode geoJSON to view
-    Update view to pass new coordinates
+    Add function to cast %Point.Geo into GeoJSON or JSON
+    Add JSON/geoJSON to view
+    Remove Mapbox API, and
+      Add coordinates to leaflet javascript
 
 Add map with all places in homepage
 
