@@ -12,14 +12,11 @@ for pair in base_colors
     .{pair[0]}
         color pair[1]
 
-for pair in base_colors
-    .{pair[0]}
-        color pair[1]
     .bg-{pair[0]}
         background-color pair[1]
 
-for pair in base_colors
-    .{pair[0]}
-        color pair[1]
     .b--{pair[0]}
         border-color pair[1]
+
+    .hover-bg-{pair[0]}:hover
+        background-color: pair[1]
