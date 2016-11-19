@@ -5,7 +5,9 @@
 </div>
 
 <%= content_tag :div, id: "placemap", class: "mb4 h5 h6-ns ba bw1 b--black-40",
-      data: [name: @place.title, address: @place.address, lat: 55.942456, lng: -3.182448] do %>
+      data: [name: @place.title,
+        address: @place.address,
+        placejson: Rumbl.GeoHelpers.place_to_geojson_feature(@place)] do %>
 <% end %>
 
 <div class="cf lh-copy black-80 f5">
