@@ -3,6 +3,12 @@ defmodule Rumbl.GeoHelpers do
         %Geo.Point{ coordinates: {lat, lng}, srid: nil}
     end
 
+    def flip_point_coordinates(%Geo.Point{} = point) do
+        # Used to flip lat, lng in geocoded points
+        {lat, lng} = point.coordinates
+        %{point | coordinates: {lng, lat}}
+    end
+
     def place_to_geojson_feature(%Rumbl.Place{} = place) do
         %{"type": "Feature",
             "geometry": point_to_geojson(place.coordinates),

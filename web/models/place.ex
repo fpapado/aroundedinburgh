@@ -1,5 +1,6 @@
 defmodule Rumbl.Place do
   use Rumbl.Web, :model
+  alias Rumbl.GeoHelpers
 
   schema "places" do
     field :url, :string
@@ -36,7 +37,8 @@ defmodule Rumbl.Place do
             %Ecto.Changeset{valid?: true, changes: %{address: address}} ->
                 address
                 |> Geocoder.call()
-                |> Rumbl.GeoHelpers.geocode_to_point()
+                |> GeoHelpers.geocode_to_point()
+                |> GeoHelpers.flip_point_coordinates()
                 |> (fn point -> put_change(changeset, :coordinates, point) end).()
 
             _ ->
