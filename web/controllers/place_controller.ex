@@ -56,7 +56,7 @@ defmodule Rumbl.PlaceController do
     changeset =
         user
         |> build_assoc(:places)
-        |> Place.changeset(place_params)
+        |> Place.coordinates_changeset(place_params)
 
     case Repo.insert(changeset) do
       {:ok, _place} ->

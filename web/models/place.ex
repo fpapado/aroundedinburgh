@@ -16,11 +16,31 @@ defmodule Rumbl.Place do
   @doc """
   Builds a changeset based on the `struct` and `params`.
   """
-  @required_fields ~w(url title description address)
+  @required_fields ~w(url title description)
   @optional_fields ~w(category_id)
   def changeset(struct, params \\ %{}) do
     struct
     |> cast(params, @required_fields, @optional_fields)
     |> assoc_constraint(:category)
   end
+
+  def coordinates_changeset(model, params) do
+      model
+      |> changeset(params)
+      |> cast(params, ~w(address), [])
+      |> put_coordinates_from_address()
+  end
+
+    defp put_coordinates_from_address(changeset) do
+        case changeset do
+            %Ecto.Changeset{valid?: true, changes: %{address: address}} ->
+                address
+                |> Geocoder.call()
+                |> Rumbl.GeoHelpers.geocode_to_point()
+                |> (fn point -> put_change(changeset, :coordinates, point) end).()
+
+            _ ->
+                changeset
+          end
+    end
 end
