@@ -1,6 +1,5 @@
 let Map = {
     placeMap: null,
-
     geoLayer: null,
 
     init(mapId, centerLatLng) {
@@ -26,14 +25,17 @@ let Map = {
 
     addFeature(placeGeo) {
         let coords = placeGeo.geometry.coordinates;
-        if (coords[0] === 0 && coords[1] === 0){
+        if (coords[0] === 0 && coords[1] === 0) {
             // 0, 0 is our fallback if something goes wrong in back-end
             console.log('It seems we have no coordinates for this place.');
         }
         else {
+            console.log(this.geoLayer);
             this.geoLayer.addData(placeGeo);
+            this.geoLayer.bindPopup(placeGeo.properties.popupContent,
+                            {className: 'pop'}).openPopup();
         }
-    }
+    },
 };
 
 export default Map;

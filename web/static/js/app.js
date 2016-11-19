@@ -21,7 +21,6 @@ if(map) {
     let placeGeo = JSON.parse(map.getAttribute('data-placejson'));
 
     initMap([0, 0]);
-    // Map.addMarker(map.getAttribute('data-name'), data.latlng);
     Map.addFeature(placeGeo);
 }
 
