@@ -2,20 +2,27 @@
     <h2 class="f3 f1-ns mt0 mb3 mt4-ns mb4-ns tracked lh-title black-70 ttu">Places</h2>
 </div>
 
-<div class="center">
+<div class="center cf sans-serif black-70">
     <%= for place <- @places do %>
-        <div class="db mb3 pa3 ba bw1">
-            <span class="dib f5 f4-ns b sans-serif black-70">
-                <%= place.title %>
-            </span>
-            <div class="db black-70">
-                <a class="dib mt3 mr2 circle bg-<%= category_as_colour(place) %>"></a>
-                <span class="dib"><%= category_name_or_blank(place) %></span>
+        <div class="cf pa2-ns fl w-100 w-33-l">
+            <div class="cf db mb3 pa3 ba bw1">
+                <span class="db f5 f4-ns b lh-title">
+                    <%= place.title %>
+                </span>
+                <span class="db mt2 f5 lh-copy lh-copy serif">
+                    <%= address_or_blank(place) %>
+                </span>
+                <div class="cf mt3 db">
+                    <div class="db fl w-70">
+                        <a class="dib mr2 circle bg-<%= category_as_colour(place) %>"></a>
+                        <span class="v-top dib f6"><%= category_name_or_blank(place) %></span>
+                    </div>
+                    <span class="db fl w-30 tr">
+                        <%= link "Show", to: place_path(@conn, :show, place),
+                            class: "dim link bb bw1 b--pale-red black-70" %>
+                    </span>
+                </div>
             </div>
-            <span class="db tr">
-                <%= link "Show", to: place_path(@conn, :show, place),
-                    class: "dim link bb bw1 b--pale-red black-70" %>
-            </span>
         </div>
     <% end %>
 </div>
