@@ -1,4 +1,6 @@
 # Basic Functionality
+Factor out forms, buttons etc into component templates
+
 Category search. "I want a place to..."
 
 Category: "To..."
