@@ -1,6 +1,8 @@
-<h2>New place</h2>
+<div class="tc tl-ns">
+    <h1 class="f2 mb3 tracked lh-title black-70 ttu">New Place</h1>
 
-<%= render "form.html", changeset: @changeset, categories: @categories,
-                        action: place_path(@conn, :create) %>
+    <%= render "form.html", changeset: @changeset, categories: @categories,
+                            action: place_path(@conn, :create) %>
 
-<%= link "Back", to: place_path(@conn, :index) %>
+    <%= link "Back", to: place_path(@conn, :index), class: "f5 dim link bb b--pale-red black-70" %>
+</div>
