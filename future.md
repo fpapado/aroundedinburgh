@@ -22,3 +22,6 @@ Web worker / offline functionality
 
 # Far off
 "Monuments" expansion pack / deck
+
+Customisability for different cities. Ideally, this is a single config file
+that defines names, colors, seed places.
