@@ -1,4 +1,6 @@
 # Basic Functionality
+Add address changeset for place edits
+
 Category search. "I want a place to..."
 
 Category: "To..."
