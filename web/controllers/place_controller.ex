@@ -39,6 +39,7 @@ defmodule Rumbl.PlaceController do
 
   def user_places_index(conn, _params, user) do
       places = Repo.all(user_places(user))
+      |> Repo.preload([:user, :category])
 
       render(conn, "index_manage.html", places: places)
   end

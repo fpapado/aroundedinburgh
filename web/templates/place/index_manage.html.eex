@@ -1,32 +1,41 @@
-<h2>Listing places</h2>
+<div class="w-100 tc sans-serif">
+    <h1 class="f3 f2-ns mt0 mb3 mt4-ns tracked lh-title black-70 ttu">Manage places</h1>
+</div>
 
-<table class="table">
-  <thead>
+<div class="mb3 mt3">
+    <%= link "New Place",
+        to: place_path(@conn, :new),
+        class: "f5 b ph3 pv2 link ba bw1 b--bright-green bg-white bg-animate hover-bg-bright-green black-70 hover-white pointer" %>
+</div>
+
+<table class="table bw1 ba b--black-80">
+  <thead class="bg-bright-green black-80">
     <tr>
-      <th>User</th>
-      <th>Url</th>
-      <th>Title</th>
-      <th>Description</th>
-
-      <th></th>
+      <th class="pa3">User ID</th>
+      <th class="pa3">Url</th>
+      <th class="pa3">Title</th>
+      <th class="pa3">Address</th>
+      <th class="pa3">Description</th>
+      <th class="pa3">Category</th>
+      <th class="pa3">Actions</th>
     </tr>
   </thead>
   <tbody>
 <%= for place <- @places do %>
     <tr>
-      <td><%= place.user_id %></td>
-      <td><%= place.url %></td>
-      <td><%= place.title %></td>
-      <td><%= place.description %></td>
+      <td class="pa3"><%= place.user_id %></td>
+      <td class="pa3"><%= place.url %></td>
+      <td class="pa3"><%= place.title %></td>
+      <td class="pa3"><%= address_or_blank(place) %></td>
+      <td class="pa3"><%= category_name_or_blank(place) %></td>
+      <td class="pa3"><%= place.description %></td>
 
-      <td class="text-right">
-        <%= link "Show", to: place_path(@conn, :show, place), class: "btn btn-default btn-xs" %>
-        <%= link "Edit", to: place_path(@conn, :edit, place), class: "btn btn-default btn-xs" %>
-        <%= link "Delete", to: place_path(@conn, :delete, place), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      <td class="pa3" class="text-right">
+        <%= link "Show", to: place_path(@conn, :show, place), class: "dib mb2 dim link bw1 bb b--dark-green dark-green" %>
+        <%= link "Edit", to: place_path(@conn, :edit, place), class: "dib mb2 dim link bw1 bb b--dark-green dark-green" %>
+        <%= link "Delete", to: place_path(@conn, :delete, place), method: :delete, data: [confirm: "Are you sure?"], class: "dib mb2 dim link bw1 bb b--pale-red pale-red" %>
       </td>
     </tr>
 <% end %>
   </tbody>
 </table>
-
-<%= link "New place", to: place_path(@conn, :new) %>
