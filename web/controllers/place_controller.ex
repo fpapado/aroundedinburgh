@@ -81,7 +81,7 @@ defmodule Rumbl.PlaceController do
   def edit(conn, %{"id" => id}, user) do
     #place = Repo.get!(Place, id)
     place = Repo.get!(user_places(user), id)
-    changeset = Place.changeset(place)
+    changeset = Place.coordinates_changeset(place)
 
     render(conn, "edit.html", place: place, changeset: changeset)
   end
@@ -89,7 +89,7 @@ defmodule Rumbl.PlaceController do
   def update(conn, %{"id" => id, "place" => place_params}, user) do
     # place = Repo.get!(Place, id)
     place = Repo.get!(user_places(user), id)
-    changeset = Place.changeset(place, place_params)
+    changeset = Place.coordinates_changeset(place, place_params)
 
     case Repo.update(changeset) do
       {:ok, place} ->

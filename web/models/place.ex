@@ -25,7 +25,7 @@ defmodule Rumbl.Place do
     |> assoc_constraint(:category)
   end
 
-  def coordinates_changeset(model, params) do
+  def coordinates_changeset(model, params \\ %{}) do
       model
       |> changeset(params)
       |> cast(params, ~w(address), [])
