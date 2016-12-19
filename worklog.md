@@ -1,6 +1,4 @@
 # Basic Functionality
-Add address changeset for place edits
-
 Factor out forms, buttons etc into component templates
 
 Category search. "I want a place to..."
