@@ -14,6 +14,7 @@
 import 'phoenix_html';
 import Map from './map';
 
+var Turbolinks = require("turbolinks")
 let map = document.getElementById('placemap');
 let defaultViewLatLng = [55.9533, -3.1883];
 
@@ -35,3 +36,5 @@ function initMap(center) {
         Map.init(map.id, center);
     }
 }
+
+Turbolinks.start()
