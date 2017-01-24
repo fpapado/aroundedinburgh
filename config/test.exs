@@ -16,4 +16,5 @@ config :rumbl, Rumbl.Repo,
   password: "postgres",
   database: "rumbl_test",
   hostname: "localhost",
+  extensions: [{Geo.PostGIS.Extension, []}],
   pool: Ecto.Adapters.SQL.Sandbox

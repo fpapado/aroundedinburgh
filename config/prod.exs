@@ -21,6 +21,7 @@ config :rumbl, Rumbl.Endpoint,
 config :rumbl, Rumbl.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: System.get_env("DATABASE_URL"),
+  extensions: [{Geo.PostGIS.Extension, []}],
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
 
 # Do not print debug messages in production
