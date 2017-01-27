@@ -3,12 +3,12 @@
 </div>
 
 <div class="center cf sans-serif black-70">
-    <div id="allplaces", class="mb4 h5 h6-ns ba bw1 b--black-40">
+  <div id="allplaces", class="mb4 h5 h6-ns ba bw1 b--black-40">
     </div>
 
     <%= for place <- @places do %>
         <div class="cf pa2-ns fl w-100 w-33-l">
-            <div class="cf db mb3 pa3 ba bw1">
+            <div class="cf db mb3 pa3 ba bw1 shadow b--black-10">
                 <span class="db f5 f4-ns b lh-title">
                     <%= place.title %>
                 </span>
@@ -22,7 +22,7 @@
                     </div>
                     <span class="db fl w-30 tr">
                         <%= link "Show", to: place_path(@conn, :show, place),
-                            class: "dim link bb bw1 b--pale-red black-70" %>
+                            class: "dim link bb bw1 b--bright-green black-70" %>
                     </span>
                 </div>
             </div>

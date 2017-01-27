@@ -16,13 +16,13 @@
   <body class="w-100">
       <main role="main" class="mw7-ns mw8-l center">
           <nav class="db w-100 pa3 ph5-ns border-box cf">
-              <div class="fl w-100 w-40-ns tc v-mid sans-serif">
+              <div class="fl w-100 w-30-ns tc v-mid sans-serif">
                   <a class="db f6 f5-ns pa2 link dim ba bw2 b--bright-green black-70 tracked lh-title b ttu",
                      href="/">
                       Around Edinburgh
                   </a>
               </div>
-              <div class="fl w-100 w-60-ns v-mid">
+              <div class="fl w-100 w-70-ns v-mid">
                   <ul class="list mt3 mb0 pl0 tc tr-ns">
                       <%= if @current_user do %>
                       <li class="dib mr2">
@@ -64,6 +64,7 @@
           </div> <!-- /container -->
       </main>
     <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+    <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>
