@@ -18,7 +18,7 @@ let allPlacesMap = document.getElementById('allplaces');
 let defaultViewLatLng = [55.9533, -3.1883];
 
 if(allPlacesMap) {
-    initMap(allPlacesMap, defaultViewLatLng);
+    initMap(allPlacesMap, defaultViewLatLng, 13);
 
     let request = new XMLHttpRequest();
     request.open('GET', '/api/places', true);
@@ -52,17 +52,17 @@ else if(singleMap) {
     let coords = placeGeo.geometry.coordinates;
 
     // GeoJSON is lng, lat; we flip them
-    initMap(singleMap, [coords[1], coords[0]]);
+    initMap(singleMap, [coords[1], coords[0]], 14);
     Map.addFeature(placeGeo);
 }
 
-function initMap(map, center) {
+function initMap(map, center, zoomLevel) {
     if (center[0] === 0 && center[1] === 0) {
         console.log('No geocoding data. Showing default city view.');
         Map.init(map.id, defaultViewLatLng);
     }
     else {
-        Map.init(map.id, center);
+        Map.init(map.id, center, zoomLevel);
     }
 }
 

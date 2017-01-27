@@ -2,8 +2,8 @@ let Map = {
     placeMap: null,
     geoLayer: null,
 
-    init(mapId, centerLatLng) {
-        this.placeMap = L.map(mapId).setView(centerLatLng, 14);
+    init(mapId, centerLatLng, zoomLevel) {
+        this.placeMap = L.map(mapId).setView(centerLatLng, zoomLevel);
 
         // L.tileLayer('https://api.mapbox.com/styles/v1/fpapado/civo3gxei00472joilop02agr/tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
         L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v8/tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
