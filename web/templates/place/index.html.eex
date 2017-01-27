@@ -3,6 +3,9 @@
 </div>
 
 <div class="center cf sans-serif black-70">
+    <div id="allplaces", class="mb4 h5 h6-ns ba bw1 b--black-40">
+    </div>
+
     <%= for place <- @places do %>
         <div class="cf pa2-ns fl w-100 w-33-l">
             <div class="cf db mb3 pa3 ba bw1">

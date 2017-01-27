@@ -2,6 +2,7 @@ defmodule Rumbl.PlaceView do
   use Rumbl.Web, :view
   alias Rumbl.Place
 
+  # Helpers
   def category_as_colour(%Place{category_id: category_id}) do
       case category_id do
           1 -> 'bright-green'
@@ -32,5 +33,30 @@ defmodule Rumbl.PlaceView do
           nil -> 'Unspecified Address'
           _   -> address
       end
+  end
+
+  # JSON Data for API
+  def render("index.json", %{data: places}) do
+      Enum.map(places, fn place ->
+        render("place.json", %{data: place})
+      end)
+  end
+
+  def render("show.json", %{data: place}) do
+      %{data: render_one(place, Rumbl.PlaceView, "place.json")}
+  end
+
+  # Render single place in JSONAPI format
+  def render("place.json", %{data: place}) do
+      %{
+          "type": "place",
+          "id": place.id,
+          "attributes": %{
+              "name": place.title,
+              "address": address_or_blank(place),
+              "category": category_name_or_blank(place),
+              "placejson": Rumbl.GeoHelpers.place_to_geojson_feature(place)
+          }
+      }
   end
 end

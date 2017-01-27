@@ -24,8 +24,14 @@ defmodule Rumbl.PlaceController do
   end
 
   def action(conn, _) do
+    try do
       apply(__MODULE__, action_name(conn),
-        [conn, conn.params, conn.assigns.current_user])
+            [conn, conn.params, conn.assigns.current_user])
+    rescue
+        e in KeyError ->
+          apply(__MODULE__, action_name(conn),
+                [conn, conn.params])
+    end
   end
 
   def index(conn, _params, user) do
@@ -35,6 +41,15 @@ defmodule Rumbl.PlaceController do
         |> Repo.preload([:category])
 
     render(conn, "index.html", places: places)
+  end
+
+  def index_json(conn, _params) do
+    places =
+      Place
+      |> Repo.all
+      |> Repo.preload([:category])
+
+    render(conn, "index.json", data: places)
   end
 
   def user_places_index(conn, _params, user) do

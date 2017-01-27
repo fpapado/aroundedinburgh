@@ -33,8 +33,9 @@ defmodule Rumbl.Router do
       resources "/places", PlaceController, only: [:show, :new, :create, :edit, :update, :delete]
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", Rumbl do
-  #   pipe_through :api
-  # end
+  scope "/api", Rumbl do
+    pipe_through :api
+
+    get "/places", PlaceController, :index_json, as: :index
+  end
 end

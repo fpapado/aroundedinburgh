@@ -1,4 +1,6 @@
 # Basic Functionality
+Add map with all places in homepage
+
 Factor out forms, buttons etc into component templates
 
 Category search. "I want a place to..."
@@ -8,13 +10,10 @@ Category: "To..."
 More styling for places (new etc.)
 
 Add maki icons https://www.mapbox.com/maki-icons/
+Customise map
 
 Slug for places
 UUID
-
-Fix logout
-
-Add map with all places in homepage
 
 # Refactoring and Tests
 Write basic integration tests
