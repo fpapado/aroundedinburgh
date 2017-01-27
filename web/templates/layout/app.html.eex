@@ -45,10 +45,6 @@
                           <%= link "Places", to: place_path(@conn, :index),
                           class: "f6 f5-ns b db link dim mid-gray" %>
                       </li>
-                      <li class="dib mr2">
-                          <%= link "Register", to: user_path(@conn, :new),
-                          class: "f6 f5-ns b db link dim mid-gray" %>
-                      </li>
                       <li class="dib">
                           <%= link "Log in", to: session_path(@conn, :new),
                           class: "f6 f5-ns b db link dim mid-gray" %>
