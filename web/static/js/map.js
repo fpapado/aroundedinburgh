@@ -13,7 +13,12 @@ let Map = {
             accessToken: 'pk.eyJ1IjoiZnBhcGFkbyIsImEiOiJjaXZudmtvbXQwMDBjMnp0ZWR6NjE4ZTFhIn0.s4SzhiEbl9tkhkkTBmSzjA',
         }).addTo(this.placeMap);
 
-        this.geoLayer = L.geoJSON().addTo(this.placeMap);
+        this.geoLayer = L.geoJSON(null, {
+            onEachFeature: function (feature, layer) {
+              layer.bindPopup(feature.properties.popupContent,
+                  {className: 'pop'});
+            }
+          }).addTo(this.placeMap);
     },
 
     addMarker(placeTitle, latlng) {
@@ -30,10 +35,7 @@ let Map = {
             console.log('It seems we have no coordinates for this place.');
         }
         else {
-            console.log(this.geoLayer);
             this.geoLayer.addData(placeGeo);
-            this.geoLayer.bindPopup(placeGeo.properties.popupContent,
-                            {className: 'pop'}).openPopup();
         }
     },
 };
