@@ -27,6 +27,6 @@
       </div>
   </div>
   <div class="fl-ns w-100 w-40-ns">
-    <img src="/images/static_edi.png" class="ba bw1 b--black-70">
+    <img src="<%= static_path(@conn, "/images/static_edi.png") %>" class="ba bw1 b--black-70">
   </div>
 </div>
