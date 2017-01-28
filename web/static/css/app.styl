@@ -40,3 +40,18 @@
 .turbolinks-progress-bar {
   background-color: pale-green;
 }
+.pastel {
+	position:relative;
+	z-index:1;
+}
+.pastel:after {
+	display:block;
+	position:absolute;
+	bottom:0;
+	left:0.25rem;
+	background-color: pastel-green;
+	height:50%;
+	width:100%;
+	z-index:-1
+	content:' ';
+}

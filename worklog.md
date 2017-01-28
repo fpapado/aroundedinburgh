@@ -1,16 +1,21 @@
 # Basic Functionality
-Add map with all places in homepage
+More styling for places (new etc.)
+
+Add maki icons https://www.mapbox.com/maki-icons/
+Customise map
+
+Flexbox menu and header
+
+Footer
+
+Give geolocation error when crashing
+
 
 Factor out forms, buttons etc into component templates
 
 Category search. "I want a place to..."
 
 Category: "To..."
-
-More styling for places (new etc.)
-
-Add maki icons https://www.mapbox.com/maki-icons/
-Customise map
 
 Slug for places
 UUID
