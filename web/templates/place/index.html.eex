@@ -22,7 +22,7 @@
                     </div>
                     <span class="db fl w-30 tr">
                         <%= link "Show", to: place_path(@conn, :show, place),
-                            class: "dim link bb bw2 b--pastel-green black-70" %>
+                            class: "f6 dim link bb bw2 b--pastel-green black-70" %>
                     </span>
                 </div>
             </div>

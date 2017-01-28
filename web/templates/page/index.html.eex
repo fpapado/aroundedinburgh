@@ -1,27 +1,32 @@
 <div class="w-100 tc poppins">
-  <h1 class="f3 f1-ns fw6 mt4 mb4 pa3 pa4-ns ba bw2 b--pastel-green black-70 tracked lh-title ttu">Around Edinburgh</h1>
+    <h2 class="f3 f1-ns fw5 mt0 mb3 mt4-ns mb3-ns tracked lh-title black-70 ttu">About</h2>
 </div>
 
-<div class="w-100 black-70 raleway">
-    <div class="mb4 f6 f5-ns lh-copy measure">
-        <h2 class="f3 mb2 tracked lh-title poppins ttu">Places you'd love</h2>
-        <p>
-            Around Edinburgh is a curated list of places in Edinburgh.
-            Instead of yet another rating system, it adopts a "this place is cool, give it a shot" approach.
-            Whether you're looking for a place to study, somewhere to chill, or a museum to visit, we have a suggestion.
-        </p>
-        <p>
-            The suggestions are merely that, suggestions!
-            As we add more people and places to the platform, you might find that your preferences match with some more than others.
-        </p>
-    </div>
+<div class="cf">
+  <div class="fl-ns w-100 w-60-ns black-70 raleway">
+      <div class="mb4 f6 f5-ns lh-copy measure">
+          <h2 class="dib f4 f3-ns mt0 mb2 tracked lh-title poppins pastel ttu">Places you'll love</h2>
+          <p>
+              Around Edinburgh is a curated list of places in Edinburgh.
+              Instead of yet another rating system, it adopts a "this place is cool, give it a shot" approach.
+              Whether you're looking for a place to study, somewhere to chill, or a museum to visit, we have a suggestion.
+          </p>
+          <p>
+              The suggestions are merely that, suggestions!
+              As we add more people and places to the platform, you might find that your preferences match with some curators more than others, and that's very much intended.
+          </p>
+      </div>
 
-    <div class="mb4 f6 f5-ns lh-copy measure">
-        <h2 class="f3 mb2 tracked lh-title poppins ttu">Join in!</h2>
-        <p>
-            Did you visit a cool place lately? We'd love to hear about it!
-            Soon, we'll be having a signup system to ease the process.
-            In the meantime, shoot us an email at info@aroundedinburgh.gmail.com for suggestions or to request an account.
-        </p>
-    </div>
+      <div class="mb4 f6 f5-ns lh-copy measure">
+          <h2 class="mt0 dib f4 f3-ns mb2 tracked lh-title poppins pastel ttu">Join in</h2>
+          <p>
+              Did you visit a cool place lately? We'd love to hear about it!
+              Soon, we'll be having a signup system to ease the process.
+              In the meantime, shoot us an email at <a class="bb bw1 b--pastel-green">aroundedinburgh@gmail.com</a> for suggestions or to request an account.
+          </p>
+      </div>
+  </div>
+  <div class="fl-ns w-100 w-40-ns">
+    <img src="/images/static_edi.png" class="ba bw1 b--black-70">
+  </div>
 </div>
