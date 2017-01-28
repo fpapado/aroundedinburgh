@@ -1,21 +1,27 @@
 # Basic Functionality
-More styling for places (new etc.)
-
 Add maki icons https://www.mapbox.com/maki-icons/
 Customise map
 
+Route to /places as home, add separate /about route
+
 Flexbox menu and header
+
+Revamp colour combinations
+
+Close off signups / approval scheme
 
 Footer
 
 Give geolocation error when crashing
 
-
-Factor out forms, buttons etc into component templates
+# Categories and Places
+More styling for places (new etc.)
 
 Category search. "I want a place to..."
 
 Category: "To..."
+
+Place summary for index?
 
 Slug for places
 UUID
@@ -23,10 +29,10 @@ UUID
 # Refactoring and Tests
 Write basic integration tests
 
+Factor out forms, buttons etc into component templates
+
 # Roles
 Admin separation
-
-Close off signups / approval scheme
 
 # Location
 Bias geocoding around Edinburgh, to help incomplete addresses
@@ -53,7 +59,5 @@ App Manifest
 Jeet grid?
 
 Animate logo
-
-Black-80?
 
 https://palx.jxnblk.com/59d7a5#pink

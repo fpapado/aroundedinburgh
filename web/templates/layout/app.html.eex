@@ -10,43 +10,44 @@
     <title>Around Edinburgh</title>
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css">
   </head>
 
   <body class="w-100">
       <main role="main" class="mw7-ns mw8-l center">
-          <nav class="db w-100 pa3 ph5-ns border-box cf">
-              <div class="fl w-100 w-30-ns v-mid sans-serif">
+          <nav class="db w-100 mt4 mb1 ph5-ns border-box cf">
+              <div class="fl w-100 w-30-ns v-mid poppins">
                 <a class="f5 f4-ns link dim pastel black-80 tracked lh-title b ttu", href="/">
                       Around Edinburgh
                   </a>
               </div>
-              <div class="fl w-100 w-70-ns v-mid">
+              <div class="fl w-100 w-70-ns v-mid poppins">
                   <ul class="list mt3 mb0 pl0 tc tr-ns">
                       <%= if @current_user do %>
-                      <li class="dib mr2">
-                          <a class="f6 f5-ns b db dark-green"><%= @current_user.username %></a>
+                      <li class="dib mr3">
+                          <a class="f6 f5-ns db dark-green"><%= @current_user.username %></a>
                       </li>
-                      <li class="dib mr2">
+                      <li class="dib mr3">
                           <%= link "Places", to: place_path(@conn, :index),
-                          class: "f6 f5-ns b db link dim mid-gray" %>
+                          class: "f6 f5-ns db link dim mid-gray bb bw1 b--black-80" %>
                       </li>
-                      <li class="dib mr2">
+                      <li class="dib mr3">
                           <%= link "My Places", to: place_path(@conn, :user_places_index),
-                          class: "f6 f5-ns b db link dim mid-gray" %>
+                          class: "f6 f5-ns db link dim mid-gray bb bw1 b--black-80" %>
                       </li>
-                      <li class="dib mr2">
+                      <li class="dib ">
                           <%= link "Log out", to: session_path(@conn, :delete, @current_user), method: "delete",
-                          class: "f6 f5-ns b db link dim mid-gray" %>
+                          class: "f6 f5-ns db link dim mid-gray bb bw1 b--black-80" %>
                       </li>
                       <% else %>
-                      <li class="dib mr2">
+                      <li class="dib mr3">
                           <%= link "Places", to: place_path(@conn, :index),
-                          class: "f6 f5-ns b db link dim mid-gray" %>
+                          class: "f6 f5-ns db link dim mid-gray bb bw2 b--black-20" %>
                       </li>
                       <li class="dib">
                           <%= link "Log in", to: session_path(@conn, :new),
-                          class: "f6 f5-ns b db link dim mid-gray" %>
+                          class: "f6 f5-ns db link dim mid-gray bb bw2 b--black-20" %>
                       </li>
                       <% end %>
                   </ul>
@@ -55,8 +56,8 @@
 
           <div class="pa3 ph5-ns">
 
-              <p class="alert db mb3 pa2 b ba bw2 b--dark-green dark-green" role="alert"><%= get_flash(@conn, :info) %></p>
-              <p class="alert db mb3 pa2 b ba bw2 b--pale-red pale-red" role="alert"><%= get_flash(@conn, :error) %></p>
+              <p class="alert db mb3 pa2 ba bw2 b--pastel-green dark-green" role="alert"><%= get_flash(@conn, :info) %></p>
+              <p class="alert db mb3 pa2 ba bw2 b--pale-red pale-red" role="alert"><%= get_flash(@conn, :error) %></p>
 
               <%= render @view_module, @view_template, assigns %>
 
