@@ -2,11 +2,12 @@
 Give geolocation error when crashing
 
 # Extra styling
-Flexbox menu and header
+Flexbox menu, header, cards
+
+Footer
 
 Revamp colour combinations
 
-Footer
 
 # Categories and Places
 Show category circle in place view

@@ -3,7 +3,7 @@
 </div>
 
 <div class="center cf poppins black-70">
-  <div id="allplaces", class="mb4 h5 h6-ns ba bw1 b--black-40">
+  <div id="allplaces" class="mb4 h5 h6-ns ba bw1 b--black-40">
     </div>
 
     <%= for place <- @places do %>
