@@ -1,8 +1,4 @@
 # Basic Functionality
-Customise maki colours
-
-Route to /places as home, add separate /about route
-
 Flexbox menu and header
 
 Revamp colour combinations
@@ -17,6 +13,8 @@ Give geolocation error when crashing
 Show category circle in place view
 
 More styling for places (new etc.)
+
+Colour map icons
 
 Category search. "I want a place to..."
 

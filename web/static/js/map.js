@@ -5,7 +5,7 @@ let Map = {
     geoLayer: null,
 
     init(mapId, centerLatLng, zoomLevel) {
-        this.placeMap = L.map(mapId).setView(centerLatLng, zoomLevel);
+        this.placeMap = L.map(mapId, {preferCanvas: true}).setView(centerLatLng, zoomLevel);
 
         // L.tileLayer('https://api.mapbox.com/styles/v1/fpapado/civo3gxei00472joilop02agr/tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
         L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png', {
