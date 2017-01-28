@@ -1,13 +1,12 @@
 # Basic Functionality
+Give geolocation error when crashing
+
+# Extra styling
 Flexbox menu and header
 
 Revamp colour combinations
 
-Close off signups / approval scheme
-
 Footer
-
-Give geolocation error when crashing
 
 # Categories and Places
 Show category circle in place view
@@ -31,6 +30,8 @@ Write basic integration tests
 Factor out forms, buttons etc into component templates
 
 # Roles
+Message for signups
+
 Admin separation
 
 # Location
