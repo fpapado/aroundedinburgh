@@ -10,28 +10,28 @@
         placejson: Rumbl.GeoHelpers.place_to_geojson_feature(@place)] do %>
 <% end %>
 
-<div class="cf lh-copy black-80 f5">
+<div class="cf lh-copy black-80 f5 raleway">
     <div class="cf fl mb4 w-100 w-70-ns">
-        <h3 class="f3 mt0 mb3 lh-title">Description</h3>
-        <p class="mt3 mb0 pr4-m measure"><%= @place.description %></p>
+        <h3 class="f3 mt0 mb3 lh-title fw6 poppins">Description</h3>
+        <p class="mt3 mb4 pr4-m measure"><%= @place.description %></p>
 
-        <h4 class="f4 mt3 mb2 lh-title">Link:</h4>
+        <h4 class="f4 mt0 mb2 lh-title fw6 poppins">Link:</h4>
         <a href="<%= @place.url %>",
-            class="dim link bb bw1 b--bright-green black-70">
+            class="dim link bb bw2 b--pastel-green black-80">
             <%= @place.url %>
         </a>
 
     </div>
     <div class="fl w-100 w-30-ns">
-        <h3 class="f3 mt0 mb3 lh-title">Information</h3>
+        <h3 class="f3 mt0 mb3 lh-title fw6 poppins">Information</h3>
 
-        <h4 class="f4 mt0 mb2 lh-title">Address:</h4>
+        <h4 class="f4 mt0 mb2 lh-title fw6 poppins">Address:</h4>
         <%= address_or_blank(@place) %>
 
-        <h4 class="f4 mt3 mb2 lh-title">Added by:</h4>
+        <h4 class="f4 mt3 mb2 lh-title fw6 poppins">Added by:</h4>
         <%= username_or_blank(@place) %>
 
-        <h4 class="f4 mt3 mb2 lh-title">Category:</h4>
+        <h4 class="f4 mt3 mb2 lh-title fw6 poppins">Category:</h4>
         <%= category_name_or_blank(@place) %>
     </div>
 </div>

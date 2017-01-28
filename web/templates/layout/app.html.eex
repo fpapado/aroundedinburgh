@@ -10,7 +10,7 @@
     <title>Around Edinburgh</title>
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Poppins:400,600" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css">
   </head>
 
@@ -26,19 +26,19 @@
                   <ul class="list mt3 mb0 pl0 tc tr-ns">
                       <%= if @current_user do %>
                       <li class="dib mr3">
-                          <a class="f6 f5-ns db dark-green"><%= @current_user.username %></a>
+                          <a class="f6 f5-ns fw6 db dark-green"><%= @current_user.username %></a>
                       </li>
                       <li class="dib mr3">
                           <%= link "Places", to: place_path(@conn, :index),
-                          class: "f6 f5-ns db link dim mid-gray bb bw1 b--black-80" %>
+                          class: "f6 f5-ns db link dim mid-gray bb bw2 b--black-20" %>
                       </li>
                       <li class="dib mr3">
                           <%= link "My Places", to: place_path(@conn, :user_places_index),
-                          class: "f6 f5-ns db link dim mid-gray bb bw1 b--black-80" %>
+                          class: "f6 f5-ns db link dim mid-gray bb bw2 b--black-20" %>
                       </li>
                       <li class="dib ">
                           <%= link "Log out", to: session_path(@conn, :delete, @current_user), method: "delete",
-                          class: "f6 f5-ns db link dim mid-gray bb bw1 b--black-80" %>
+                          class: "f6 f5-ns db link dim mid-gray bb bw2 b--black-20" %>
                       </li>
                       <% else %>
                       <li class="dib mr3">

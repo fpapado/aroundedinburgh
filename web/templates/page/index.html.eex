@@ -1,10 +1,10 @@
-<div class="w-100 tc sans-serif">
-  <h1 class="f3 f1-ns mt4 mb4 pa3 pa4-ns ba bw2 b--pastel-green black-70 tracked lh-title ttu">Around Edinburgh</h1>
+<div class="w-100 tc poppins">
+  <h1 class="f3 f1-ns fw6 mt4 mb4 pa3 pa4-ns ba bw2 b--pastel-green black-70 tracked lh-title ttu">Around Edinburgh</h1>
 </div>
 
-<div class="w-100 black-70">
+<div class="w-100 black-70 raleway">
     <div class="mb4 f6 f5-ns lh-copy measure">
-        <h2 class="f3 mb2 tracked lh-title ttu">Places you'd love</h2>
+        <h2 class="f3 mb2 tracked lh-title poppins ttu">Places you'd love</h2>
         <p>
             Around Edinburgh is a curated list of places in Edinburgh.
             Instead of yet another rating system, it adopts a "this place is cool, give it a shot" approach.
@@ -17,7 +17,7 @@
     </div>
 
     <div class="mb4 f6 f5-ns lh-copy measure">
-        <h2 class="f3 mb2 tracked lh-title ttu">Join in!</h2>
+        <h2 class="f3 mb2 tracked lh-title poppins ttu">Join in!</h2>
         <p>
             Did you visit a cool place lately? We'd love to hear about it!
             Soon, we'll be having a signup system to ease the process.
