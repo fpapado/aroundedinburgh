@@ -15,6 +15,8 @@ Footer
 Give geolocation error when crashing
 
 # Categories and Places
+Show category circle in place view
+
 More styling for places (new etc.)
 
 Category search. "I want a place to..."

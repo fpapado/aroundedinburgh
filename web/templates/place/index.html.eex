@@ -8,8 +8,8 @@
 
     <%= for place <- @places do %>
         <div class="cf pa2-ns fl w-100 w-33-l">
-            <div class="cf db mb2 pa3 ba bw1 shadow b--black-10">
-                <span class="db f5 f4-ns b lh-title">
+            <div class="cf db mb2 pa3 ba bw1 shadow b--black-10 poppins">
+                <span class="db f5 f4-ns fw6 lh-title">
                     <%= place.title %>
                 </span>
                 <span class="db mt2 f5 lh-copy lh-copy serif">

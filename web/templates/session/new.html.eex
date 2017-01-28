@@ -13,7 +13,7 @@
         class: "b pa2 input-reset ba bw1 b--black-80 bg-transparent form-control" %>
     </div>
     <div class="mt3">
-        <%= submit "Log In", class: "f5 b ph3 pv2 input-reset ba bw1 b--bright-green bg-white bg-animate hover-bg-bright-green black-70 hover-white pointer" %>
+        <%= submit "Log In", class: "f5 fw6 ph3 pv2 input-reset ba bw1 b--bright-green bg-white bg-animate hover-bg-bright-green black-70 hover-white pointer" %>
     </div>
     <% end %>
 </div>

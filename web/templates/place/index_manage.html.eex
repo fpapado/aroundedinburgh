@@ -5,7 +5,7 @@
 <div class="mb3 mt3">
     <%= link "New Place",
         to: place_path(@conn, :new),
-        class: "f5 b ph3 pv2 link ba bw1 b--bright-green bg-white bg-animate hover-bg-bright-green black-70 hover-white pointer" %>
+        class: "f5 fw6 ph3 pv2 link ba bw1 b--bright-green bg-white bg-animate hover-bg-bright-green black-70 hover-white pointer" %>
 </div>
 
 <table class="table bw1 ba b--black-80">

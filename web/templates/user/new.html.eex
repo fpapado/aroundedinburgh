@@ -2,7 +2,7 @@
     <h1 class="f2 mb3 tracked lh-title black-70 ttu">Sign Up</h1>
 
     <%= if @changeset.action do %>
-        <div class="alert db mb3 ph3 b ba bw2 b--pale-red pale-red" role="alert">
+        <div class="alert db mb3 ph3 fw6 ba bw2 b--pale-red pale-red" role="alert">
             <p>
                 Oops, something went wrong! please check the errors below.
             </p>
@@ -32,7 +32,7 @@
             <%= error_tag f, :password %>
         </div>
         <div class="mt3">
-            <%= submit "Sign Up", class: "f5 b ph3 pv2 input-reset ba bw1 b--bright-green bg-white bg-animate hover-bg-bright-green black-70 hover-white pointer" %>
+            <%= submit "Sign Up", class: "f5 fw6 ph3 pv2 input-reset ba bw1 b--bright-green bg-white bg-animate hover-bg-bright-green black-70 hover-white pointer" %>
         </div>
     <% end %>
 </div>

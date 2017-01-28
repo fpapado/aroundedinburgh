@@ -10,7 +10,7 @@
     <title>Around Edinburgh</title>
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css">
   </head>
 
@@ -18,7 +18,7 @@
       <main role="main" class="mw7-ns mw8-l center">
           <nav class="db w-100 mt4 mb1 ph5-ns border-box cf">
               <div class="fl w-100 w-30-ns v-mid poppins">
-                <a class="f5 f4-ns link dim pastel black-80 tracked lh-title b ttu", href="/">
+                <a class="f5 f4-ns link dim pastel black-80 tracked lh-title fw6 ttu", href="/">
                       Around Edinburgh
                   </a>
               </div>
