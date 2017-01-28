@@ -1,3 +1,5 @@
+import icons from './icons';
+
 let Map = {
     placeMap: null,
     geoLayer: null,
@@ -11,7 +13,12 @@ let Map = {
             maxZoom: 18
         }).addTo(this.placeMap);
 
+        // Configure GeoJSON layer
         this.geoLayer = L.geoJSON(null, {
+            pointToLayer: function (feature, latlng) {
+              let category = feature.properties.category;
+              return L.marker(latlng, {icon: icons[category]});
+            },
             onEachFeature: function (feature, layer) {
               layer.bindPopup(feature.properties.popupContent,
                   {className: 'pop'});

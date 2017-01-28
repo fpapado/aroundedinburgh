@@ -1,6 +1,5 @@
 # Basic Functionality
-Add maki icons https://www.mapbox.com/maki-icons/
-Customise map
+Customise maki colours
 
 Route to /places as home, add separate /about route
 
