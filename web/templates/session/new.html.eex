@@ -1,19 +1,21 @@
-<div class="tc">
-    <h1 class="f2 mb3 tracked lh-title black-70 ttu">Log in</h1>
+<div class="w-100 tc poppins">
+    <h2 class="f3 f1-ns fw5 mt0 mb3 mt4-ns mb3-ns tracked lh-title black-70 ttu">Log in</h2>
+</div>
 
+<div class="tc lh-copy black-80 f5 raleway">
     <%= form_for @conn, session_path(@conn, :create), [as: :session], fn f-> %>
     <div class="mb3 form-group">
-        <label class="db fw4 lh-copy f6" for="username">Username</label>
+        <label class="mb1 db lh-copy f5" for="username">Username</label>
         <%= text_input f, :username, placeholder: "Username",
-        class: "b pa2 input-reset ba bw1 b--black-80 bg-transparent form-control" %>
+        class: "pa2 input-reset ba bw1 b--black-20 bg-white form-control" %>
     </div>
     <div class="mb3 form-group">
-        <label class="db fw4 lh-copy f6" for="password">Password</label>
+        <label class="mb1 db lh-copy f5" for="password">Password</label>
         <%= password_input f, :password, placeholder: "Password",
-        class: "b pa2 input-reset ba bw1 b--black-80 bg-transparent form-control" %>
+        class: "pa2 input-reset ba bw1 b--black-20 bg-white form-control" %>
     </div>
     <div class="mt3">
-        <%= submit "Log In", class: "f5 fw6 ph3 pv2 input-reset ba bw1 b--bright-green bg-white bg-animate hover-bg-bright-green black-70 hover-white pointer" %>
+        <%= submit "Log In", class: "f5 fw6 ph3 pv2 input-reset ba bw1 b--pastel-green bg-white bg-animate hover-bg-pastel-green black-70 hover-white pointer" %>
     </div>
     <% end %>
 </div>
