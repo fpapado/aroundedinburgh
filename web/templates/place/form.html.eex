@@ -8,38 +8,38 @@
   <div class="clearfix">
       <div class="fl w-100 pr4-ns w-40-ns">
           <div class="mb3 form-group">
-            <%= label f, :title, class: "db fw4 lh-copy f5" %>
-            <%= text_input f, :title, class: "w-100 pa2 input-reset ba bg-transparent pa2 input-reset ba bg-transparent form-control" %>
+            <%= label f, :title, class: "db mb1 lh-copy f5" %>
+            <%= text_input f, :title, class: "w-100 pa2 input-reset ba bw1 b--black-20 bg-transparent pa2 input-reset form-control" %>
             <%= error_tag f, :title %>
           </div>
 
           <div class="mb3 form-group">
-            <%= label f, :address, class: "db fw4 lh-copy f5" %>
-            <%= text_input f, :address, class: "w-100 pa2 input-reset ba bg-transparent form-control" %>
+            <%= label f, :address, class: "db mb1 lh-copy f5" %>
+            <%= text_input f, :address, class: "w-100 pa2 input-reset ba bw1 b--black-20 bg-transparent form-control" %>
             <%= error_tag f, :address %>
           </div>
 
           <div class="mb3 form-group">
-            <%= label f, :url, class: "db fw4 lh-copy f5" %>
-            <%= text_input f, :url, class: "w-100 pa2 input-reset ba bg-transparent form-control" %>
+            <%= label f, :url, class: "db mb1 lh-copy f5" %>
+            <%= text_input f, :url, class: "w-100 pa2 input-reset ba bw1 b--black-20 bg-transparent form-control" %>
             <%= error_tag f, :url %>
           </div>
 
           <div class="mb3 form-group">
-              <%= label f, :category_id, "Category", class: "db fw4 lh-copy f5" %>
-              <%= select f, :category_id, @categories, class: "w-100 pa2 ba bg-transparent form-control",
+              <%= label f, :category_id, "Category", class: "db mb1 lh-copy f5" %>
+              <%= select f, :category_id, @categories, class: "w-100 pa2 ba bw1 b--black-20 bg-transparent form-control",
                                           prompt: "Choose a category" %>
           </div>
       </div>
 
       <div class="fl w-100 w-60-ns mb3 form-group">
-        <%= label f, :description, class: "db fw4 lh-copy f5" %>
-        <%= textarea f, :description, rows: "8", class: "w-100 pa2 input-reset ba bg-transparent form-control" %>
+        <%= label f, :description, class: "db mb1 lh-copy f5" %>
+        <%= textarea f, :description, rows: "8", class: "w-100 pa2 input-reset ba bw1 b--black-20 bg-transparent form-control" %>
         <%= error_tag f, :description %>
       </div>
   </div>
 
   <div class="w-100 mb3 form-group">
-    <%= submit "Submit", class: "f5 ph3 pv2 input-reset ba bw1 b--bright-green bg-white bg-animate hover-bg-bright-green black-70 hover-white pointer" %>
+    <%= submit "Submit", class: "f5 ph3 pv2 input-reset ba bw1 b--pastel-green bg-white bg-animate hover-bg-pastel-green black-70 hover-white pointer" %>
   </div>
 <% end %>

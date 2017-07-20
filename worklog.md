@@ -1,5 +1,4 @@
 # July 20, 2017
-- Log in page styling
 - Link maps to page
 - Add flexbox
 - Add search? Category search?
