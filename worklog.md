@@ -1,12 +1,14 @@
 # July 20, 2017
-- Link maps to page
 - Add flexbox
 - Add search? Category search?
 - Add more places
-- color on map labels
+- Color on map labels
+  - Requires SVG and recoloring
 
 # Basic Functionality
+Sanitize input / XSS
 Give geolocation error when crashing
+Turbolinks off?
 
 # Extra styling
 Flexbox menu, header, cards

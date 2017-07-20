@@ -20,8 +20,11 @@ let Map = {
               return L.marker(latlng, {icon: icons[category]});
             },
             onEachFeature: function (feature, layer) {
-              layer.bindPopup(feature.properties.popupContent,
-                  {className: 'pop'});
+              let { id, name } = feature.properties;
+              layer.bindPopup(
+                `<a class="link blue" href="/places/${id}">${name}</a>`,
+                {className: 'pop'}
+              );
             }
           }).addTo(this.placeMap);
     },

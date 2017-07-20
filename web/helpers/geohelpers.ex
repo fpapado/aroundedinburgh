@@ -16,7 +16,8 @@ defmodule Rumbl.GeoHelpers do
             "geometry": point_to_geojson(place.coordinates),
             "properties": %{"name": place.title,
                             "category": place.category.name,
-                            "popupContent": place.title
+                            "popupContent": place.title,
+                            "id": place.id
                            },
         }
         |> Poison.encode!()
