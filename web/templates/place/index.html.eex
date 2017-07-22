@@ -17,7 +17,7 @@
                 </span>
                 <div class="cf mt3 db">
                     <div class="db fl w-70">
-                        <a class="dib mr2 circle bg-<%= category_as_colour(place) %>"></a>
+                        <span class="dib mr2 circle bg-<%= category_as_colour(place) %>"></span>
                         <span class="v-top dib f6"><%= category_name_or_blank(place) %></span>
                     </div>
                     <span class="db fl w-30 tr">
