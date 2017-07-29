@@ -6,15 +6,15 @@
 use Mix.Config
 
 # General application configuration
-config :rumbl,
-  ecto_repos: [Rumbl.Repo]
+config :around,
+  ecto_repos: [Around.Repo]
 
 # Configures the endpoint
-config :rumbl, Rumbl.Endpoint,
+config :around, AroundWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "pnxBEo3bzUBO3deJu7HIXIwze2vVJ06nxy7v2LRlRCRy2gGWn3KNKYaAXGGkjLHv",
-  render_errors: [view: Rumbl.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Rumbl.PubSub,
+  render_errors: [view: AroundWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: Around.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

@@ -1,7 +1,7 @@
-defmodule Rumbl.PlaceControllerTest do
-  use Rumbl.ConnCase
+defmodule AroundWeb.PlaceControllerTest do
+  use AroundWeb.ConnCase
 
-  alias Rumbl.Place
+  alias Around.Place
   @valid_attrs %{description: "some content", title: "some content", url: "some content"}
   @invalid_attrs %{}
 

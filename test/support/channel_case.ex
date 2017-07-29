@@ -1,4 +1,4 @@
-defmodule Rumbl.ChannelCase do
+defmodule AroundWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -20,22 +20,22 @@ defmodule Rumbl.ChannelCase do
       # Import conveniences for testing with channels
       use Phoenix.ChannelTest
 
-      alias Rumbl.Repo
+      alias Around.Repo
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
 
 
       # The default endpoint for testing
-      @endpoint Rumbl.Endpoint
+      @endpoint AroundWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Rumbl.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Around.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Rumbl.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Around.Repo, {:shared, self()})
     end
 
     :ok

@@ -1,7 +1,7 @@
-defmodule Rumbl.CategoryTest do
-  use Rumbl.ModelCase
+defmodule AroundWeb.CategoryTest do
+  use AroundWeb.ModelCase
 
-  alias Rumbl.Category
+  alias Around.Category
 
   @valid_attrs %{name: "some content"}
   @invalid_attrs %{}

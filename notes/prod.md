@@ -9,7 +9,7 @@ Needed in prod.secret.exs:
 ```elixir
 use Mix.Config
 
-config :rumbl, Rumbl.Repo,
+config :around, Around.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "...",
   database: "...",

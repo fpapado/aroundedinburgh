@@ -1,4 +1,4 @@
-defmodule Rumbl.ConnCase do
+defmodule AroundWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -20,23 +20,23 @@ defmodule Rumbl.ConnCase do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
 
-      alias Rumbl.Repo
+      alias Around.Repo
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
 
-      import Rumbl.Router.Helpers
+      import AroundWeb.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint Rumbl.Endpoint
+      @endpoint AroundWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Rumbl.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Around.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Rumbl.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Around.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}
