@@ -1,5 +1,7 @@
 # First
-Move to phoenix 1.3
+Context structure
+Accounts and Users
+  - move auth.ex to accounts?
 
 # Next
 - Figure out why app.js does not have new map links

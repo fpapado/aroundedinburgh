@@ -8,7 +8,7 @@ defmodule AroundWeb.Place do
     field :description, :string
     field :address, :string
     field :coordinates, Geo.Point
-    belongs_to :user, AroundWeb.User
+    belongs_to :user, Around.Accounts.User
     belongs_to :category, AroundWeb.Category
 
     timestamps()

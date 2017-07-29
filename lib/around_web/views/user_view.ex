@@ -1,6 +1,6 @@
 defmodule AroundWeb.UserView do
     use AroundWeb, :view
-    alias AroundWeb.User
+    alias Around.Accounts.User
 
     def first_name(%User{name: name}) do
         name
