@@ -1,4 +1,8 @@
-# July 20, 2017
+# First
+Move to phoenix 1.3
+
+# Next
+- Figure out why app.js does not have new map links
 - Add flexbox
 - Add search? Category search?
 - Add more places
