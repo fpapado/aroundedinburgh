@@ -1,4 +1,4 @@
-defmodule Rumbl.Repo.Migrations.AddCategoryIdToVideo do
+defmodule Around.Repo.Migrations.AddCategoryIdToVideo do
   use Ecto.Migration
 
   def change do

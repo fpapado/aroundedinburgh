@@ -1,7 +1,7 @@
 defmodule AroundWeb.CategoryTest do
   use AroundWeb.ModelCase
 
-  alias Around.Category
+  alias AroundWeb.Category
 
   @valid_attrs %{name: "some content"}
   @invalid_attrs %{}

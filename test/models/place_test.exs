@@ -1,7 +1,7 @@
 defmodule AroundWeb.PlaceTest do
   use AroundWeb.ModelCase
 
-  alias Around.Place
+  alias AroundWeb.Place
 
   @valid_attrs %{description: "some content", title: "some content", url: "some content"}
   @invalid_attrs %{}

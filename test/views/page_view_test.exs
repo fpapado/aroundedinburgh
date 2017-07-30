@@ -1,3 +1,3 @@
-defmodule Rumbl.PageViewTest do
-  use Rumbl.ConnCase, async: true
+defmodule AroundWeb.PageViewTest do
+  use AroundWeb.ConnCase, async: true
 end

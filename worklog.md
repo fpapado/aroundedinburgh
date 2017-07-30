@@ -2,6 +2,7 @@
 Context structure
 Accounts and Users
   - move auth.ex to accounts?
+Fix tests
 
 # Next
 - Figure out why app.js does not have new map links

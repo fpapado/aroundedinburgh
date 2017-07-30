@@ -1,4 +1,4 @@
-defmodule Rumbl.Repo.Migrations.AddLocationAddressToPlace do
+defmodule Around.Repo.Migrations.AddLocationAddressToPlace do
   use Ecto.Migration
 
   def change do

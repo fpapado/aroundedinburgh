@@ -1,4 +1,4 @@
-defmodule Rumbl.Repo.Migrations.EnablePostgis do
+defmodule Around.Repo.Migrations.EnablePostgis do
   use Ecto.Migration
 
   def up do
